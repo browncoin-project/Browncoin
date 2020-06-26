@@ -17,22 +17,9 @@ The following steps will help you set up a wallet and start mining!
 
 1. Download the Browncoin Core Wallet (Above) and extract all of the applications in the folder. 
 2. Close your wallet and create a file called "browncoin.conf" in "%APPDATA%\browncoin\"
-3. Paste the following in browncoin.conf and save it.
-rpcuser=rpc_browncoin
-rpcpassword=4dee60e65a19cc8fc149dea9a
-rpcallowip=127.0.0.1
-rpcport=20609
-listen=1
-server=1
+3. Paste the following in browncoin.conf and save it. [https://pastebin.com/ni2XmRcm]
 4. Open your wallet
-5. Create a .bat file named mine.bat in the same folder where you extracted browncoin-cli.exe and paste the following text into mine.bat.
-@echo off
-set SCRIPT_PATH=%cd%
-cd %SCRIPT_PATH%
-echo Press [CTRL+C] to stop mining.
-:begin
- browncoin-cli.exe generate 1
-goto begin
+5. Create a .bat file named mine.bat in the same folder where you extracted browncoin-cli.exe and paste the following text into mine.bat. [https://pastebin.com/71anY3Fs]
 6. Save the file
 7. Make sure your wallet is on and full sync and then execute mine.bat to start mining your first block! 
 
