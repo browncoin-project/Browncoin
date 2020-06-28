@@ -11,17 +11,6 @@ Welcome to Browncoin! This is a Scrypt-based Litecoin fork to be used as an elec
 ## Browncoin Use:
 A majority of the 2b2t community cannot access payment services like PayPal. This stops players engaging in the 2b2t economy halting them from purchasing priority queue and stops newer players from purchasing ingame items from other players, 2b2t players have created online shops where they can sell their items to other players (Usually are scams). With browncoin people can buy/sell items from each other without a middle man (PayPal) and don't have to fear being charged back.
 
-# Getting Started!
-
-The following steps will help you set up a wallet and start mining!
-
-1. Download the Browncoin Core Wallet and extract all of the applications in the folder. 
-2. Close your wallet and create a file called "browncoin.conf" in "%APPDATA%\browncoin\"
-3. Paste the following in browncoin.conf and save it. [https://pastebin.com/ni2XmRcm]
-4. Open your wallet
-5. Create a .bat file named mine.bat in the same folder where you extracted browncoin-cli.exe and paste the following text into mine.bat. [https://pastebin.com/71anY3Fs]
-6. Save the file
-7. Make sure your wallet is on and full sync and then execute mine.bat to start mining your first block! 
-
-## If you have any problems join our discord: https://discord.gg/UF9yQXW
+check out [doc](https://github.com/SoiledCold5/Browncoin/tree/master/doc) for building Browncoin and other stuff
+## Join our discord for tutorials and more: https://discord.gg/UF9yQXW
 
