@@ -128,7 +128,10 @@ public:
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("node1.walletbuilders.com");
-
+        vSeeds.emplace_back("176.9.22.50", "176.9.22.50");
+        vSeeds.emplace_back("167.86.68.224", "167.86.68.224");
+        vseeds.emplace_back("165.227.3.67","165.227.3.67");
+        
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,26);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,25);
