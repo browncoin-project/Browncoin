@@ -85,7 +85,7 @@ This means you cannot use a directory that located directly on the host Windows 
 The next three steps are an example of how to acquire the source in an appropriate way.
 
     cd /usr/src
-    sudo git clone https://github.com/browncoin-project/browncoin.git
+    sudo git clone https://github.com/SoiledCold5/browncoin.git
     sudo chmod -R a+rw browncoin
 
 Once the source code is ready the build steps are below.
