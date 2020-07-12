@@ -57,9 +57,11 @@ Build Browncoin Core
     Configure and build the headless browncoin binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
-
+        
+        chmod +x autogen.sh
         ./autogen.sh
         ./configure
+        chmod +x share/genbuild.sh
         make
 
 3.  It is recommended to build and run the unit tests:
