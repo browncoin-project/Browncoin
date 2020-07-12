@@ -50,7 +50,7 @@ Build Browncoin Core
 1. Clone the browncoin source code and cd into `browncoin`
 
         git clone https://github.com/SoiledCold5/Browncoin
-        cd browncoin
+        cd Browncoin
 
 2.  Build browncoin-core:
 
