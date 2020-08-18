@@ -531,7 +531,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<>";
-    const std::string URL_WEBSITE = "<https://discord.gg/HKgDca7>";
+    const std::string URL_WEBSITE = "<https://discord.gg/kTkCFG3>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i"), COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
