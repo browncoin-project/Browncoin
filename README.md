@@ -11,7 +11,7 @@ Welcome to Browncoin! This is a Scrypt-based Litecoin fork to be used as an elec
 ## Browncoin Use:
 A majority of the 2b2t community cannot access payment services like PayPal. This stops players engaging in the 2b2t economy halting them from purchasing priority queue and stops newer players from purchasing ingame items from other players, 2b2t players have created online shops where they can sell their items to other players (Usually are scams). With browncoin people can buy/sell items from each other without a middle man (PayPal) and don't have to fear being charged back.
 
-check out [doc](https://github.com/SoiledCold5/Browncoin/tree/master/doc) for building Browncoin and other stuff
-check out [releases](https://github.com/SoiledCold5/Browncoin/releases/) to download Browncoin binaries!
+- check out [doc](https://github.com/SoiledCold5/Browncoin/tree/master/doc) for building Browncoin and other stuff
+- check out [releases](https://github.com/SoiledCold5/Browncoin/releases/) to download Browncoin binaries!
 ## Join our discord for tutorials and more: https://discord.gg/UF9yQXW
 
