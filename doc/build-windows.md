@@ -94,7 +94,7 @@ Once the source code is ready the build steps are below.
     cd depends
     make HOST=x86_64-w64-mingw32
     cd ..
-    ./autogen.sh # not required when building from tarball
+    ./autogen.sh 
     CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
     make
 
