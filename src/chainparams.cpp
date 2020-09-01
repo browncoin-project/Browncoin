@@ -129,6 +129,7 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("213.239.231.78", "213.239.231.78");
         vSeeds.emplace_back("167.86.68.224", "167.86.68.224");
+        vSeeds.emplace_back("82.22.44.80", "82.22.44.80");
 
         
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,26);
