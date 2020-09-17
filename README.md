@@ -2,9 +2,11 @@
 
 ![Browncoin](https://cdn.discordapp.com/icons/681280771041918987/5d0eeccb636cffea0b2af3c254acf81c.png?size=256)
 
-Welcome to Browncoin! This is a Scrypt-based Litecoin fork to be used as an electronic currency that doesn't rely on middlemen such as PayPal or other payment processors.
+## Welcome to Browncoin! 
+
 What is Browncoin?
 ----------------
+This is a Scrypt-based Litecoin fork to be used as an electronic currency that doesn't rely on middlemen such as PayPal or other payment processors.
 Browncoin is an experimental digital currency that enables instant payments to
 anyone, anywhere in the world. Browncoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
