@@ -18,6 +18,8 @@ To Build
 ---------------------
 
 ```bash
+chmod +x autogen.sh
+chmod +x share/genbuild.sh
 ./autogen.sh
 ./configure
 make
