@@ -556,8 +556,8 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/browncoin-project/browncoin>";
-    const std::string URL_WEBSITE = "<https://browncoin.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/SoiledCold5/Browncoin>";
+    const std::string URL_WEBSITE = "<https://github.com/SoiledCold5/Browncoin>"; // TODO: Website
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
