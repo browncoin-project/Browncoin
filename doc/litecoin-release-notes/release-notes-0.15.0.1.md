@@ -145,7 +145,7 @@ Browncoin Core 0.15.0 contains the following changes to the RPC interface and `b
 
 * When running Browncoin Core with a single wallet, there are **no** changes to the RPC interface or `browncoin-cli`. All RPC calls and `browncoin-cli` commands continue to work as before.
 * When running Browncoin Core with multi-wallet, all *node-level* RPC methods continue to work as before. HTTP RPC requests should be send to the normal `<RPC IP address>:<RPC port>/` endpoint, and `browncoin-cli` commands should be run as before. A *node-level* RPC method is any method which does not require access to the wallet.
-* When running Browncoin Core with multi-wallet, *wallet-level* RPC methods must specify the wallet for which they're intended in every request. HTTP RPC requests should be send to the `<RPC IP address>:<RPC port>/wallet/<wallet name>/` endpoint, for example `127.0.0.1:9332/wallet/wallet1.dat/`. `browncoin-cli` commands should be run with a `-rpcwallet` option, for example `browncoin-cli -rpcwallet=wallet1.dat getbalance`.
+* When running Browncoin Core with multi-wallet, *wallet-level* RPC methods must specify the wallet for which they're intended in every request. HTTP RPC requests should be send to the `<RPC IP address>:<RPC port>/wallet/<wallet name>/` endpoint, for example `127.0.0.1:20609/wallet/wallet1.dat/`. `browncoin-cli` commands should be run with a `-rpcwallet` option, for example `browncoin-cli -rpcwallet=wallet1.dat getbalance`.
 * A new *node-level* `listwallets` RPC method is added to display which wallets are currently loaded. The names returned by this method are the same as those used in the HTTP endpoint and for the `rpcwallet` argument.
 
 Note that while multi-wallet is now fully supported, the RPC multi-wallet interface should be considered unstable for version 0.15.0, and there may backwards-incompatible changes in future versions.
@@ -484,7 +484,7 @@ Low-level RPC changes
 ### Wallet
 - #9359 `f7ec7cf` Add test for CWalletTx::GetImmatureCredit() returning stale values (ryanofsky)
 - #9576 `56ab672` [wallet] Remove redundant initialization (practicalswift)
-- #9333 `fa625b0` Document CWalletTx::mapValue entries and remove erase of nonexistent "version" entry (ryanofsky)
+- #20610 `fa625b0` Document CWalletTx::mapValue entries and remove erase of nonexistent "version" entry (ryanofsky)
 - #9906 `72fb515` Disallow copy constructor CReserveKeys (instagibbs)
 - #9369 `3178b2c` Factor out CWallet::nTimeSmart computation into a method (ryanofsky)
 - #9830 `afcd7c0` Add safe flag to listunspent result (NicolasDorier)

@@ -45,11 +45,11 @@ config file): *Needed for Tor version 0.2.7.0 and older versions of Tor only. Fo
 versions of Tor see [Section 3](#3-automatically-listen-on-tor).*
 
 	HiddenServiceDir /var/lib/tor/browncoin-service/
-	HiddenServicePort 9333 127.0.0.1:9333
-	HiddenServicePort 19335 127.0.0.1:19335
+	HiddenServicePort 20610 127.0.0.1:20610
+	HiddenServicePort 30610 127.0.0.1:30610
 
 The directory can be different of course, but (both) port numbers should be equal to
-your browncoind's P2P listen port (9333 by default).
+your browncoind's P2P listen port (20610 by default).
 
 	-externalip=X   You can tell browncoin about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -84,7 +84,7 @@ as well, use `discover` instead:
 
 	./browncoind ... -discover
 
-and open port 9333 on your firewall (or use -upnp).
+and open port 20610 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach .onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:

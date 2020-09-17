@@ -502,7 +502,7 @@ Low-level RPC changes
 ### Wallet
 - #9359 `f7ec7cf` Add test for CWalletTx::GetImmatureCredit() returning stale values (ryanofsky)
 - #9576 `56ab672` [wallet] Remove redundant initialization (practicalswift)
-- #9333 `fa625b0` Document CWalletTx::mapValue entries and remove erase of nonexistent "version" entry (ryanofsky)
+- #20610 `fa625b0` Document CWalletTx::mapValue entries and remove erase of nonexistent "version" entry (ryanofsky)
 - #9906 `72fb515` Disallow copy constructor CReserveKeys (instagibbs)
 - #9369 `3178b2c` Factor out CWallet::nTimeSmart computation into a method (ryanofsky)
 - #9830 `afcd7c0` Add safe flag to listunspent result (NicolasDorier)
