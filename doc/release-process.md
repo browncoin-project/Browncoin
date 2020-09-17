@@ -38,7 +38,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/browncoin-project/gitian.sigs.brwn.git
     git clone https://github.com/browncoin-project/browncoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/browncoin-project/browncoin.git
+    git clone https://github.com/SoiledCold5/Browncoin.git
 
 ### Browncoin maintainers/release engineers, suggestion for writing release notes
 

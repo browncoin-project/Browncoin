@@ -89,10 +89,11 @@ This means you cannot use a directory that is located directly on the host Windo
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/browncoin-project/browncoin.git
+    git clone https://github.com/SoiledCold5/Browncoin.git
 
 Once the source code is ready the build steps are below:
 
+    cd Browncoin
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
     cd depends
     make HOST=x86_64-w64-mingw32
@@ -117,7 +118,7 @@ This means you cannot use a directory that located directly on the host Windows 
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/browncoin-project/browncoin.git
+    git clone https://github.com/SoiledCold5/Browncoin.git
 
 Then build using:
 
@@ -139,7 +140,7 @@ Installation
 After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the Windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
-way. This will install to `c:\workspace\browncoin`, for example:
+way. This will install to `c:\workspace\Browncoin`, for example:
 
     make install DESTDIR=/mnt/c/workspace/browncoin
 

@@ -43,17 +43,18 @@ Build Browncoin Core
 
 1. Clone the Browncoin Core source code:
 
-        git clone https://github.com/browncoin-project/browncoin
-        cd browncoin
+        git clone https://github.com/SoiledCold5/Browncoin
+        cd Browncoin
 
 2.  Build Browncoin Core:
 
     Configure and build the headless Browncoin Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
-
+        chmod +x autogen.sh
         ./autogen.sh
         ./configure
+        chmod +x share/genbuild.sh
         make
 
 3.  It is recommended to build and run the unit tests:

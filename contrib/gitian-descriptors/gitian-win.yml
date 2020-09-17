@@ -23,7 +23,7 @@ packages:
 - "python"
 - "rename"
 remotes:
-- "url": "https://github.com/browncoin-project/browncoin.git"
+- "url": "https://github.com/SoiledCold5/Browncoin.git"
   "dir": "browncoin"
 files: []
 script: |
