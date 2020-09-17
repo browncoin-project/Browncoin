@@ -168,7 +168,7 @@
         <translation>確認錢包加密</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BROWNCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
         <translation>警告: 如果你將錢包加密後又忘記密碼，你就會&lt;b&gt;失去所有 Browncoin 了&lt;/b&gt;！</translation>
     </message>
     <message>
@@ -178,10 +178,6 @@
     <message>
         <source>Wallet encrypted</source>
         <translation>錢包已加密</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your browncoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 現在要關閉來完成加密程序。請記得將錢包加密不能完全防止你的 Browncoins 經被入侵電腦的惡意程式偷取。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -246,10 +242,6 @@
         <translation>總覽 &amp;O</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>節點</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>顯示錢包一般總覽</translation>
     </message>
@@ -306,14 +298,6 @@
         <translation>改變密碼... &amp;C</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>付款位址... &amp;S</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>收款位址... &amp;R</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>開啓網址... &amp;U</translation>
     </message>
@@ -348,10 +332,6 @@
     <message>
         <source>Browncoin</source>
         <translation>Browncoin</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>錢包</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -586,6 +566,10 @@
         <source>Label</source>
         <translation>標記</translation>
     </message>
+    <message>
+        <source>Wallet</source>
+        <translation>錢包</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -669,6 +653,9 @@
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
+    </context>
+<context>
+    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>

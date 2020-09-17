@@ -83,11 +83,7 @@
     <name>BitcoinGUI</name>
     <message>
         <source>Browncoin</source>
-        <translation>לייטקוין</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>ארנק</translation>
+        <translation>ללייטקוין</translation>
     </message>
     </context>
 <context>
@@ -114,7 +110,7 @@
     <name>Intro</name>
     <message>
         <source>Browncoin</source>
-        <translation>לייטקוין</translation>
+        <translation>ללייטקוין</translation>
     </message>
     </context>
 <context>
@@ -156,6 +152,10 @@
 </context>
 <context>
     <name>ReceiveRequestDialog</name>
+    <message>
+        <source>Wallet</source>
+        <translation>ארנק</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -207,6 +207,9 @@
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
+    </context>
+<context>
+    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>

@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2017 The Bitcoin Core developers
-// Copyright (c) 2020 The Browncoin Core developers
+// Copyright (c) 2009-2018 The Bitcoin Core developers
+// Copyright (c) 2020 The Browncoin Core developers The Bitcoin Core developers
 // Copyright (c) 2017 The Zcash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -115,7 +115,7 @@ public:
      * Create a DER-serialized signature.
      * The test_case parameter tweaks the deterministic nonce.
      */
-    bool Sign(const uint256& hash, std::vector<unsigned char>& vchSig, uint32_t test_case = 0) const;
+    bool Sign(const uint256& hash, std::vector<unsigned char>& vchSig, bool grind = true, uint32_t test_case = 0) const;
 
     /**
      * Create a compact signature (65 bytes), which allows reconstructing the used public key.
@@ -159,7 +159,7 @@ struct CExtKey {
     void Decode(const unsigned char code[BIP32_EXTKEY_SIZE]);
     bool Derive(CExtKey& out, unsigned int nChild) const;
     CExtPubKey Neuter() const;
-    void SetMaster(const unsigned char* seed, unsigned int nSeedLen);
+    void SetSeed(const unsigned char* seed, unsigned int nSeedLen);
     template <typename Stream>
     void Serialize(Stream& s) const
     {
@@ -182,12 +182,12 @@ struct CExtKey {
 };
 
 /** Initialize the elliptic curve support. May not be called twice without calling ECC_Stop first. */
-void ECC_Start(void);
+void ECC_Start();
 
 /** Deinitialize the elliptic curve support. No-op if ECC_Start wasn't called first. */
-void ECC_Stop(void);
+void ECC_Stop();
 
 /** Check that required EC support is available at runtime. */
-bool ECC_InitSanityCheck(void);
+bool ECC_InitSanityCheck();
 
 #endif // BITCOIN_KEY_H

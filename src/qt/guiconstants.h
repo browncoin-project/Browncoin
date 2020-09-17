@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2016 The Bitcoin Core developers
+// Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,5 +50,9 @@ static const int MAX_URI_LENGTH = 255;
 #define QAPP_ORG_DOMAIN "browncoin.org"
 #define QAPP_APP_NAME_DEFAULT "Browncoin-Qt"
 #define QAPP_APP_NAME_TESTNET "Browncoin-Qt-testnet"
+#define QAPP_APP_NAME_REGTEST "Browncoin-Qt-regtest"
+
+/* One gigabyte (GB) in bytes */
+static constexpr uint64_t GB_BYTES{1000000000};
 
 #endif // BITCOIN_QT_GUICONSTANTS_H
