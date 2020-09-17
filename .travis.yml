@@ -54,7 +54,7 @@ env:
     - WINEDEBUG=fixme-all
     - DOCKER_PACKAGES="build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git ca-certificates ccache"
     - CACHE_ERR_MSG="Error! Initial build successful, but not enough time remains to run later build stages and tests. Please manually re-run this job by using the travis restart button or asking a browncoin maintainer to restart. The next run should not time out because the build cache has been saved."
-    - LITECOIN_SCRYPT=0
+    - BROWNCOIN_SCRYPT=0
 before_install:
   - set -o errexit; source .travis/test_03_before_install.sh
 install:
@@ -127,7 +127,7 @@ jobs:
         GOAL="install"
         BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --disable-bip70 --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++"
         CONFIG_SHELL="/bin/dash"
-        LITECOIN_SCRYPT=1
+        BROWNCOIN_SCRYPT=1
 
     - stage: test
       name: 'x86_64 Linux  [GOAL: install]  [bionic]  [uses qt5 dev package instead of depends Qt to speed up build and avoid timeout]'
@@ -137,7 +137,7 @@ jobs:
         DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
         GOAL="install"
         BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --enable-debug CXXFLAGS=\"-g0 -O2\""
-        LITECOIN_SCRYPT=1
+        BROWNCOIN_SCRYPT=1
 
     - stage: test
       name: 'x86_64 Linux  [GOAL: install]  [trusty]  [no functional tests, no depends, only system libs]'
@@ -159,7 +159,7 @@ jobs:
         NO_DEPENDS=1
         GOAL="install"
         BITCOIN_CONFIG="--enable-zmq --disable-wallet --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER --with-sanitizers=thread --disable-hardening --disable-asm CC=clang CXX=clang++"
-        LITECOIN_SCRYPT=1
+        BROWNCOIN_SCRYPT=1
 
     - stage: test
       name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no depends, only system libs, sanitizers: address/leak (ASan + LSan) + undefined (UBSan) + integer]'
@@ -169,7 +169,7 @@ jobs:
         NO_DEPENDS=1
         GOAL="install"
         BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER --with-sanitizers=address,integer,undefined CC=clang CXX=clang++"
-        LITECOIN_SCRYPT=1
+        BROWNCOIN_SCRYPT=1
 
     - stage: test
       name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no depends, only system libs, sanitizers: fuzzer,address]'
@@ -191,7 +191,7 @@ jobs:
         DEP_OPTS="NO_WALLET=1"
         GOAL="install"
         BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
-        LITECOIN_SCRYPT=1
+        BROWNCOIN_SCRYPT=1
 
     - stage: test
       name: 'macOS 10.10  [GOAL: deploy] [no functional tests]'

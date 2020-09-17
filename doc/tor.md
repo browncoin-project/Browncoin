@@ -1,4 +1,4 @@
-# TOR SUPPORT IN LITECOIN
+# TOR SUPPORT IN BROWNCOIN
 
 It is possible to run Browncoin Core as a Tor hidden service, and connect to such services.
 
