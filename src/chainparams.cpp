@@ -245,7 +245,6 @@ public:
             /* dTxRate  */ 0
         };
 
-        /* enable fallback fee on testnet */
         m_fallback_fee_enabled = true;
     }
 };
