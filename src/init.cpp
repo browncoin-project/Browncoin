@@ -559,7 +559,7 @@ std::string LicenseInfo()
     const std::string URL_SOURCE_CODE = "<https://github.com/SoiledCold5/Browncoin>";
     const std::string URL_WEBSITE = "<https://github.com/SoiledCold5/Browncoin>"; // TODO: Website
 
-    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
+    return CopyrightHolders(strprintf(_("Copyright (C) %i"), COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
            strprintf(_("Please contribute if you find %s useful. "
                        "Visit %s for further information about the software."),
