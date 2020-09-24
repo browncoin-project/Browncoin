@@ -28,4 +28,4 @@ A majority of the 2b2t community cannot access payment services like PayPal. Thi
 ## Credits
 - Satoshi Nakamoto for starting the financial revolution using Bitcoin
 - The Bitcoin Core developers and The Litecoin Core developers for making Browncoin possible.
-- Twitter, Inc for making twemoji (our logo uses their man_tone5 emoji)
+- Twitter, Inc for making twemoji (our logo uses their "Man: Dark Skin Tone" emoji)
