@@ -15,7 +15,7 @@ software which enables the use of this currency.
 
 ## Browncoin Specs :
 - 69 Million Coins
-- 1 Minute Blocks
+- 1 Minute Blocks Times
 - 1 Megabyte Blocks
 - 50 Browncoin Block Reward (Halves every 690,000 blocks)
 ## Browncoin Use:
@@ -26,10 +26,10 @@ A majority of the 2b2t community cannot access payment services like PayPal. Thi
 ## Join our discord for tutorials and more: https://discord.gg/UF9yQXW
 
 ## Credits
-- Satoshi Nakamoto for starting the financial revolution using Bitcoin
+- Satoshi Nakamoto for starting the financial revolution by creating Bitcoin
 - The Bitcoin Core developers and The Litecoin Core developers for making Browncoin possible.
 - Twitter, Inc for making twemoji (our logo uses their "Man: Dark Skin Tone" emoji)
 - 2b2t.org for bringing together the players of the Brownmen
-- SoiledCold for creating the idea
-- Mahan for helping in the programming
+- SoiledCold for creating the idea and bring together the developers
+- Mahan for helping in the programming and compiling
 - EMMC for advertising and moderating browncoin and browncoin's discord server
