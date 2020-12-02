@@ -206,7 +206,7 @@ request. Typically reviewers will review the code for obvious errors, as well as
 test out the patch set and opine on the technical merits of the patch. Project
 maintainers take into account the peer review when determining if there is
 consensus to merge a pull request (remember that discussions may have been
-spread out over GitHub, mailing list and IRC discussions). The following
+spread out over GitHub, reddit and discord). The following
 language is used within pull-request comments:
 
   - ACK means "I have tested the code and I agree it should be merged";
