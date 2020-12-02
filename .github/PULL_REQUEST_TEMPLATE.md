@@ -1,9 +1,9 @@
-Pull requests without a rationale and clear improvement may be closed
+Any pull requests without a rationale and clear improvement may be closed
 immediately.
 
 Please provide clear motivation for your patch and explain how it improves
 Browncoin user experience or Browncoin Core developer experience
-significantly.
+significantly. An example is decreasing syncing time for users.
 
 * Any test improvements or new tests that improve coverage are always welcome.
 * All other changes should have accompanying unit tests (see `src/test/`) or
@@ -25,9 +25,9 @@ significantly.
   preferred in the [developer notes](/doc/developer-notes.md), stylistic code
   changes are usually rejected.
 
-Browncoin Core has a thorough review process and even the most trivial change
+Browncoin Core developers has a thorough review process and even the most trivial change
 needs to pass a lot of eyes and requires non-zero or even substantial time
 effort to review. There is a huge lack of active reviewers on the project, so
 patches often sit for a long time.
 
-Please join our discord link in the read.me once you have made a pull request.
+Please join our discord, the link is in the read.me once you have made a pull request.
