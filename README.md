@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Genesis](https://img.shields.io/badge/Genesis%20Block-June%252C%202020-lightgrey)
+![Genesis](https://img.shields.io/badge/Genesis%20Block-JuneC%202020-lightgrey)
 
 # Nice this is Browncoin's README!
 
