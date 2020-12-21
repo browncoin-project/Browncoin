@@ -1,4 +1,7 @@
-﻿# Nice this is Browncoin's README!
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Genesis](https://img.shields.io/badge/Genesis%20Block-June%25'th%2C%2020-lightgrey)
+
+# Nice this is Browncoin's README!
 
 ![Browncoin](https://cdn.discordapp.com/icons/681280771041918987/2889cce7028e2ab1ca64d5f7c62bfea9.png?size=256)
 
