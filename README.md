@@ -13,13 +13,31 @@ with no central authority: managing transactions and issuing money are carried
 out collectively by the network. Browncoin Core is the name of open source
 software which enables the use of this currency.
 
-## Browncoin Specs :
-- 69 Million Coins
-- 1 Minute Blocks Times
-- 1 Megabyte Blocks
-- 50 Browncoin Block Reward (Halves every 690,000 blocks)
+Specifications
+--------------
+Specification | Descriptor
+------------- | ----------
+Ticker Symbol                  | BYND
+Algorithm                      | SCRYPT
+Maxiumum Supply                | 84000000
+SegWit                         | Activated
+Mainnet RPC Port               | 20609
+Mainnet P2P Port               | 20610
+Block Time                     | 60 Seconds / 1 Minute
+Coinbase Transaction Maturity  | 11 Blocks
+Confirmation                   | 3 Blocks
+Difficulty Adjustment Interval | 4 Blocks
+
+Block Rewards
+-------------
+Year | Block | Reward
+---- | ----- | ------
+2019-2020 | 1-690,000        | 50 BRWN
+2020-2021 | 690001-1,380,000  | 25 BRWN
+2021-2022 | 1680001-2520000 | 12.5 BRWN
+...       | ...             | ...
 ## Browncoin Use:
-A majority of the 2b2t community cannot access payment services like PayPal. This stops players engaging in the 2b2t economy halting them from purchasing priority queue and stops newer players from purchasing ingame items from other players. 2b2t players have created online shops where they can sell their items to other players (Usually are scams). With Browncoin, people can buy/sell items from each other without a middle man (PayPal) and don't have to fear being charged back.
+A majority of the 2b2t community cannot access payment services like PayPal. This stops players engaging in the 2b2t economy halting them from purchasing priority queue and stops newer players from purchasing ingame items from other players. 2b2t players have created online shops where they can sell their items to other players. With Browncoin, people can buy/sell items from each other without a middle man (PayPal) and don't have to fear being charged back.
 
 - check out [doc](https://github.com/SoiledCold5/Browncoin/tree/master/doc) for building Browncoin and other stuff
 - check out [releases](https://github.com/SoiledCold5/Browncoin/releases/) to download Browncoin binaries!
