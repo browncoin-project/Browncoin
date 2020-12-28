@@ -20,12 +20,10 @@ Specifications
 --------------
 Specification | Descriptor
 ------------- | ----------
-Ticker Symbol                  | BYND
+Ticker Symbol                  | BRWN
 Algorithm                      | SCRYPT
-Maxiumum Supply                | 84000000
+Maxiumum Supply                | 69000000
 SegWit                         | Activated
-Mainnet RPC Port               | 20609
-Mainnet P2P Port               | 20610
 Block Time                     | 60 Seconds / 1 Minute
 Coinbase Transaction Maturity  | 11 Blocks
 Confirmation                   | 3 Blocks
