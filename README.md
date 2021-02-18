@@ -51,4 +51,3 @@ A majority of the 2b2t community cannot access payment services like PayPal. Thi
 - 2b2t.org for bringing together the players of the Brownmen
 - SoiledCold for creating the idea and bring together the developers
 - Mahan for helping in the programming and compiling
-- EMMC for advertising Browncoin and moderating Browncoin's Discord server
