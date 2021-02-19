@@ -121,9 +121,8 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("213.239.231.78","213.239.231.78");
-        vSeeds.emplace_back("167.86.68.224","167.86.68.224");
-        vSeeds.emplace_back("82.22.44.80","82.22.44.80");
+        vSeeds.emplace_back("dnsseed.browncoin.info");
+        vSeeds.emplace_back("fennectech.dynserv.org");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,26);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
