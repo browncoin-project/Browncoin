@@ -92,10 +92,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("000000000000000000000000000000000000000000000000006e06416de5fee0");
+        consensus.nMinimumChainWork = uint256S("00000000000000000000000000000000000000000000000000fae3b04fa4445f");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x9c8db8b8901b7b15200a4339f1747c3dcc411e5e65d4df84f3d5461e91408cca"); //77394
+        consensus.defaultAssumeValid = uint256S("0x81a6e9eb6a4837c418b61f61bf260c34d05ebe1f12d0fe000cec09383e248438"); //247364
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -108,7 +108,7 @@ public:
         pchMessageStart[3] = 0x85;
         nDefaultPort = 20610;
         nPruneAfterHeight = 100000;
-        m_assumed_blockchain_size = 0;
+        m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
         genesis = CreateGenesisBlock(1593073226, 517967, 0x1e0ffff0, 1, 50 * COIN);
@@ -143,14 +143,15 @@ public:
             {
                 {  0, uint256S("0x3ee6c1dad58724b6fb81f5fee6593d50f4b25f57fd4e5d0bd2b5c6e707571c43")},
                 {  50000, uint256S("0x5c62a9a328e761231e6c5841b4cbb67a8212e801f88996e78ef6803c3271e5af")},
+                {  200000, uint256S("0xc2eec4856e6263ddab4a753444491b4cf2f649f6d8e59c9bed362e40e4462fce")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from block:  getchaintxstats 4096 9c8db8b8901b7b15200a4339f1747c3dcc411e5e65d4df84f3d5461e91408cca (block height 77394)
-            /* nTime    */ 1600346374,
-            /* nTxCount */ 81932,
-            /* dTxRate  */ 0.01326063940437343
+            // Data from block:  getchaintxstats 43200 81a6e9eb6a4837c418b61f61bf260c34d05ebe1f12d0fe000cec09383e248438 (block height 247364)
+            /* nTime    */ 1614080342,
+            /* nTxCount */ 266219,
+            /* dTxRate  */ 0.0122879390851726
         };
 
         /* disable fallback fee on mainnet */
