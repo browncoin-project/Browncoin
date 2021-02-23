@@ -33,9 +33,9 @@ Block Rewards
 -------------
 Year | Block | Reward
 ---- | ----- | ------
-2019-2020 | 1-690,000        | 50 BRWN
-2020-2021 | 690001-1,380,000  | 25 BRWN
-2021-2022 | 1680001-2520000 | 12.5 BRWN
+2020-2021 | 1-690,000        | 50 BRWN
+2021-2022 | 690001-1,380,000  | 25 BRWN
+2022-2023 | 1680001-2520000 | 12.5 BRWN
 ...       | ...             | ...
 ## Browncoin Use:
 A majority of the 2b2t community cannot access payment services like PayPal. This stops players engaging in the 2b2t economy halting them from purchasing priority queue and stops newer players from purchasing ingame items from other players. 2b2t players have created online shops where they can sell their items to other players. With Browncoin, people can buy/sell items from each other without a middle man (PayPal) and don't have to fear being charged back.
