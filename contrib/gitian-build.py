@@ -28,8 +28,8 @@ def setup():
         subprocess.check_call(['git', 'clone', 'https://github.com/browncoin-project/browncoin-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
-    if not os.path.isdir('browncoin'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/SoiledCold5/Browncoin.git'])
+    if not os.path.isdir('Browncoin'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/browncoin-project/Browncoin.git'])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'bionic', '--arch', 'amd64']
     if args.docker:
