@@ -28,7 +28,7 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/SoiledCold5/Browncoin.git"
+- "url": "https://github.com/browncoin-project/Browncoin.git"
   "dir": "browncoin"
 files:
 - "MacOSX10.11.sdk.tar.gz"
