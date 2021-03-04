@@ -1,5 +1,5 @@
 ---
-name: "browncoin-dmg-signer"
+name: "Browncoin-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -10,7 +10,7 @@ remotes:
 - "url": "https://github.com/browncoin-project/browncoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "browncoin-osx-unsigned.tar.gz"
+- "Browncoin-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -29,8 +29,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=browncoin-osx-unsigned.tar.gz
-  SIGNED=browncoin-osx-signed.dmg
+  UNSIGNED=Browncoin-osx-unsigned.tar.gz
+  SIGNED=Browncoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"
