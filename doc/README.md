@@ -3,7 +3,7 @@ Browncoin Core
 
 Setup
 ---------------------
-Browncoin Core is the original Browncoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Browncoin transactions, which requires approximately 50 megabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Browncoin Core is the original Browncoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Browncoin transactions, which requires approximately 150 megabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
 To download Browncoin Core, visit [releases](https://github.com/SoiledCold5/Browncoin/releases).
 
