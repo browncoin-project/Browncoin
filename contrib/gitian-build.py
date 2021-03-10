@@ -59,21 +59,21 @@ def build():
         print('\nCompiling ' + args.version + ' Linux')
         subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'Browncoin='+args.commit, '--url', 'Browncoin='+args.url, '../Browncoin/contrib/gitian-descriptors/gitian-linux.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs.brwn/', '../Browncoin/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/Browncoin-*.tar.gz build/out/src/Browncoin-*.tar.gz ../Browncoin-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/browncoin-*.tar.gz build/out/src/browncoin-*.tar.gz ../Browncoin-binaries/'+args.version, shell=True)
 
     if args.windows:
         print('\nCompiling ' + args.version + ' Windows')
         subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'Browncoin='+args.commit, '--url', 'Browncoin='+args.url, '../Browncoin/contrib/gitian-descriptors/gitian-win.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs.brwn/', '../Browncoin/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call('mv build/out/Browncoin-*-win-unsigned.tar.gz inputs/', shell=True)
-        subprocess.check_call('mv build/out/Browncoin-*.zip build/out/Browncoin-*.exe ../Browncoin-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/browncoin-*-win-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/browncoin-*.zip build/out/browncoin-*.exe ../Browncoin-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nCompiling ' + args.version + ' MacOS')
         subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'Browncoin='+args.commit, '--url', 'Browncoin='+args.url, '../Browncoin/contrib/gitian-descriptors/gitian-osx.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs.brwn/', '../Browncoin/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call('mv build/out/Browncoin-*-osx-unsigned.tar.gz inputs/', shell=True)
-        subprocess.check_call('mv build/out/Browncoin-*.tar.gz build/out/Browncoin-*.dmg ../Browncoin-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/browncoin-*-osx-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/browncoin-*.tar.gz build/out/browncoin-*.dmg ../Browncoin-binaries/'+args.version, shell=True)
 
     os.chdir(workdir)
 
