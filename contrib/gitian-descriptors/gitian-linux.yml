@@ -123,7 +123,10 @@ script: |
   done
 
   cd Browncoin
+  find . -type f -iname "*.sh" -exec chmod +x {} \;
+  find . -type f -iname "*.py" -exec chmod +x {} \;
   BASEPREFIX=`pwd`/depends
+  chmod +x ${BASEPREFIX}/config.*
   # Build dependencies for each host
   for i in $HOSTS; do
     EXTRA_INCLUDES="$EXTRA_INCLUDES_BASE/$i"

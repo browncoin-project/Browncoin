@@ -87,8 +87,11 @@ script: |
   export PATH=${WRAP_DIR}:${PATH}
 
   cd Browncoin
+  find . -type f -iname "*.sh" -exec chmod +x {} \;
+  find . -type f -iname "*.py" -exec chmod +x {} \;
   BASEPREFIX=`pwd`/depends
-
+  
+  chmod +x ${BASEPREFIX}/config.*
   mkdir -p ${BASEPREFIX}/SDKs
   tar -C ${BASEPREFIX}/SDKs -xf ${BUILD_DIR}/MacOSX10.11.sdk.tar.gz
 

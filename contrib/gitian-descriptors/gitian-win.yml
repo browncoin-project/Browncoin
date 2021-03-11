@@ -104,9 +104,12 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   create_per-host_linker_wrapper "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
-
   cd Browncoin
+  find . -type f -iname "*.sh" -exec chmod +x {} \;
+  find . -type f -iname "*.py" -exec chmod +x {} \;
   BASEPREFIX=`pwd`/depends
+  chmod +x ${BASEPREFIX}/config.*
+  
   # Build dependencies for each host
   for i in $HOSTS; do
     make ${MAKEOPTS} -C ${BASEPREFIX} HOST="${i}"
