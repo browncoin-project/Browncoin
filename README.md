@@ -25,9 +25,9 @@ Algorithm                      | SCRYPT
 Maxiumum Supply                | 69000000
 SegWit                         | Activated
 Block Time                     | 60 Seconds / 1 Minute
-Coinbase Transaction Maturity  | 11 Blocks
-Confirmation                   | 3 Blocks
-Difficulty Adjustment Interval | 4 Blocks
+Coinbase Transaction Maturity  | 11 Blocks / 11 Minuntes
+Confirmation                   | 3 Blocks / 3 Minuntes
+Difficulty Adjustment Interval | 4 Blocks / 4 Minuntes
 
 Block Rewards
 -------------
