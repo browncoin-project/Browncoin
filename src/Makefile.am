@@ -106,6 +106,7 @@ BITCOIN_CORE_H = \
   banman.h \
   base58.h \
   bech32.h \
+  bignum.h \
   bloom.h \
   blockencodings.h \
   blockfilter.h \
@@ -354,7 +355,13 @@ crypto_libbitcoin_crypto_base_a_SOURCES = \
   crypto/sha512.cpp \
   crypto/sha512.h \
   crypto/siphash.cpp \
-  crypto/siphash.h
+  crypto/siphash.h \
+  crypto/verthash_datfile.h \
+  crypto/verthash_datfile.cpp \
+  crypto/tiny_sha3/sha3.c \
+  crypto/tiny_sha3/sha3.h \
+  crypto/verthash.cpp \
+  crypto/verthash.h
 
 if USE_ASM
 crypto_libbitcoin_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
