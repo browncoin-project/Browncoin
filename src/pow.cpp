@@ -24,7 +24,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         if(nHeight < VERTHASH_FORKBLOCK_MAINNET) {
             return GetNextWorkRequired_Scrypt(pindexLast, pblock, params);
         } else if(nHeight >= VERTHASH_FORKBLOCK_MAINNET && nHeight < VERTHASH_FORKBLOCK_MAINNET+10) { // Force difficulty for 10 blocks - Verthash hardfork
-            return 0x1c07fff8;
+            return 0x1d00fff6;
         }
     } else {
         if(nHeight < VERTHASH_FORKBLOCK_TESTNET) {
