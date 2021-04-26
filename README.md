@@ -47,7 +47,7 @@ A majority of the 2b2t community cannot access payment services like PayPal. Thi
 ## Credits
 - Satoshi Nakamoto for starting the financial revolution by creating Bitcoin
 - The Bitcoin Core developers and The Litecoin Core developers for making Browncoin possible.
-- Twitter, Inc for making twemoji (our logo uses their "Man: Dark Skin Tone" emoji)
+- Twitter, Inc for making twemoji([License](https://github.com/twitter/twemoji/blob/master/LICENSE-GRAPHICS)) (our logo uses their "Man: Dark Skin Tone" emoji)
 - 2b2t.org for bringing together the players of the Brownmen
 - SoiledCold for creating the idea and bring together the developers
 - Mahan for helping in the programming and compiling
