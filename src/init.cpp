@@ -562,8 +562,8 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/SoiledCold5/Browncoin>";
-    const std::string URL_WEBSITE = "<https://github.com/SoiledCold5/Browncoin>"; // TODO: Website
+    const std::string URL_SOURCE_CODE = "<https://github.com/browncoin-project/Browncoin>";
+    const std::string URL_WEBSITE = "<http://browncoin.info>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i"), COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -577,6 +577,8 @@ std::string LicenseInfo()
            "\n" +
            _("This is experimental software.") + "\n" +
            strprintf(_("Distributed under the MIT software license, see the accompanying file %s or %s"), "COPYING", "<https://opensource.org/licenses/MIT>") + "\n" +
+           "\n" +
+		   strprintf(_("This product uses a modified version of \"Man: Dark Skin Tone\" emoji as a logo from Twemoji made by Twitter, Inc %s "), "<https://github.com/twitter/twemoji/blob/master/LICENSE-GRAPHICS>") + "\n" +
            "\n" +
            strprintf(_("This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard."), "<https://www.openssl.org>") +
            "\n";

@@ -13,7 +13,7 @@ You will need the following dependencies, which can be installed as root via pkg
 ```shell
 pkg install autoconf automake boost-libs git gmake libevent libtool openssl pkgconf
 
-git clone https://github.com/SoiledCold5/Browncoin.git
+git clone https://github.com/browncoin-project/Browncoin.git
 ```
 
 In order to run the test suite (recommended), you will need to have Python 3 installed:

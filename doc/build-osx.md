@@ -43,7 +43,7 @@ Build Browncoin Core
 
 1. Clone the Browncoin Core source code:
 
-        git clone https://github.com/SoiledCold5/Browncoin
+        git clone https://github.com/browncoin-project/Browncoin.git
         cd Browncoin
 
 2.  Build Browncoin Core:

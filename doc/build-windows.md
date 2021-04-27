@@ -89,7 +89,7 @@ This means you cannot use a directory that is located directly on the host Windo
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/SoiledCold5/Browncoin.git
+    git clone https://github.com/browncoin-project/Browncoin.git
 
 Once the source code is ready the build steps are below:
 
