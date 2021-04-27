@@ -246,8 +246,6 @@ browncoin-${VERSION}-x86_64-linux-gnu.tar.gz
 browncoin-${VERSION}-osx64.tar.gz
 browncoin-${VERSION}-osx.dmg
 browncoin-${VERSION}.tar.gz
-browncoin-${VERSION}-win32-setup.exe
-browncoin-${VERSION}-win32.zip
 browncoin-${VERSION}-win64-setup.exe
 browncoin-${VERSION}-win64.zip
 ```
