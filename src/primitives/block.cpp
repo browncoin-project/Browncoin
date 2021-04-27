@@ -11,17 +11,30 @@
 #include <util/strencodings.h>
 #include <crypto/common.h>
 #include <crypto/scrypt.h>
+#include <chainparams.h>
+#include <crypto/verthash.h>
 
 uint256 CBlockHeader::GetHash() const
 {
     return SerializeHash(*this);
 }
 
-uint256 CBlockHeader::GetPoWHash() const
+uint256 CBlockHeader::GetPoWHash(const int nHeight) const
 {
-    uint256 thash;
-    scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
-    return thash;
+   uint256 thash;
+   char *out = ((char *)(thash.begin()));
+
+   if((Params().NetworkIDString() == CBaseChainParams::TESTNET && nHeight >= VERTHASH_FORKBLOCK_TESTNET) ||
+       (Params().NetworkIDString() == CBaseChainParams::MAIN && nHeight >= VERTHASH_FORKBLOCK_MAINNET) ||
+       (Params().NetworkIDString() == CBaseChainParams::REGTEST))
+   {
+       Verthash::Hash(this->begin(), out);
+   }
+   else
+   {
+   	    scrypt_1024_1_1_256(this->begin(), out);
+   }
+   return thash;
 }
 
 std::string CBlock::ToString() const

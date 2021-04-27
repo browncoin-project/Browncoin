@@ -70,7 +70,12 @@ public:
         consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
+
+        // powLimit should not be too high to produce blocks 1 min apart.
+        consensus.powLimit = uint256S("0007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff80");
+        // Value for previous forks
+        consensus.preVerthashPowLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+
         consensus.nPowTargetTimespan = 4 * 60;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -172,7 +177,12 @@ public:
         consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 0; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
         consensus.BIP66Height = 0; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+
+        // powLimit should not be too high to produce blocks 1 min apart.
+        consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        // Value for previous forks
+        consensus.preVerthashPowLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+
         consensus.nPowTargetTimespan = 4 * 60; 
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
@@ -263,6 +273,7 @@ public:
         consensus.BIP65Height = 1351; // BIP65 activated on regtest (Used in functional tests)
         consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in functional tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.preVerthashPowLimit = consensus.powLimit;
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
