@@ -21,7 +21,7 @@ Specifications
 Specification | Descriptor
 ------------- | ----------
 Ticker Symbol                  | BRWN
-Algorithm                      | SCRYPT
+Algorithm                      | SCRYPT (Hard forking to Verthash at Block 400,000)
 Maxiumum Supply                | 69000000
 SegWit                         | Activated
 Block Time                     | 60 Seconds / 1 Minute
@@ -51,3 +51,4 @@ A majority of the 2b2t community cannot access payment services like PayPal. Thi
 - 2b2t.org for bringing together the players of the Brownmen
 - SoiledCold for creating the idea and bring together the developers
 - Mahan for helping in the programming and compiling
+- Vertion for helping us implete Verthash to Browncoin
