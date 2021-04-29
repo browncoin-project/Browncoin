@@ -31,7 +31,7 @@ script: |
 
   WRAP_DIR=$HOME/wrapped
   HOSTS="x86_64-w64-mingw32"
-  CONFIGFLAGS="--enable-reduce-exports --disable-bench --disable-gui-tests"
+  CONFIGFLAGS="--enable-reduce-exports --disable-bench --disable-tests --disable-shared"
   FAKETIME_HOST_PROGS="ar ranlib nm windres strip objcopy"
   FAKETIME_PROGS="date makensis zip"
   HOST_CFLAGS="-O2 -g"
@@ -124,7 +124,7 @@ script: |
 
   # Create the release tarball using (arbitrarily) the first host
   ./autogen.sh
-  CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/ --disable-shared
+  CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist
   SOURCEDIST=`echo browncoin-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
@@ -164,7 +164,7 @@ script: |
     rename 's/-setup\.exe$/-setup-unsigned.exe/' *-setup.exe
     cp -f browncoin-*setup*.exe $OUTDIR/
     cd installed
-    mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
+    #mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
     find . -name "lib*.la" -delete
     find . -name "lib*.a" -delete
     # Browncoin: Delete libbitcoin from binary distribution for now, see #192
