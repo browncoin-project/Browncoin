@@ -1453,11 +1453,13 @@ bool AppInitMain(InitInterfaces& interfaces)
     }
 
 
+
+
     // ********************************************************* Step 6b: generate verthash file and verify if it's valid
 
     int cycle = 0;
     while(cycle <= 1) {
-        uiInterface.InitMessage(_("Creating Verthash Datafile"));
+        uiInterface.InitMessage(_("Creating Verthash Datafile - may take several minutes"));
         VerthashDatFile::CreateMiningDataFile();
 
         bool fVerthashDiskOnly = gArgs.GetBoolArg("-verthash-diskonly", false);
