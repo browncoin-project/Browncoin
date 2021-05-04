@@ -55,6 +55,21 @@ unsigned int GetNextWorkRequired_Scrypt(const CBlockIndex* pindexLast, const CBl
 {
     assert(pindexLast != nullptr);
     unsigned int nProofOfWorkLimit = UintToArith256(params.preVerthashPowLimit).GetCompact();
+    const int nHeight = pindexLast->nHeight + 1;
+
+    if(Params().NetworkIDString() == CBaseChainParams::MAIN) {
+        if(nHeight < VERTHASH_FORKBLOCK_MAINNET) {
+            return GetNextWorkRequired_Scrypt(pindexLast, pblock, params);
+        } else if(nHeight >= VERTHASH_FORKBLOCK_MAINNET && nHeight < VERTHASH_FORKBLOCK_MAINNET+10) { // Force difficulty for 10 blocks - Verthash hardfork
+            return 0x1d00fff6;
+        }
+    } else {
+        if(nHeight < VERTHASH_FORKBLOCK_TESTNET) {
+            return GetNextWorkRequired_Scrypt(pindexLast, pblock, params);
+        } else if(nHeight >= VERTHASH_FORKBLOCK_TESTNET && nHeight < VERTHASH_FORKBLOCK_TESTNET+10) { // Set diff to mindiff on testnet Verthash fork
+            return nProofOfWorkLimit;
+        }
+    }
 
     // Only change once per difficulty adjustment interval
     if ((pindexLast->nHeight+1) % params.preDifficultyAdjustmentInterval() != 0)
@@ -177,9 +192,6 @@ unsigned int KimotoGravityWell(const CBlockIndex* pindexLast,
     } else if (bnNew > bnProofOfWorkLimit) { // REGTEST
         bnNew = bnProofOfWorkLimit;
 	}
-
-    return bnNew.GetCompact();
-}
 
 unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
 {

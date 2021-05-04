@@ -469,13 +469,13 @@ void VerthashDatFile::CreateMiningDataFile() {
     TRY_LOCK(cs_Datfile, lockDatfile);
     if (!lockDatfile)
     {
-        LogPrintf("Skipping Verthash data generation because one is already running\n");
+        LogPrintf("Skipping Verthash data generation because one is already running.\n");
         return;
     }
 
     const fs::path targetFile = GetDataDir() / "verthash.dat";
     if(!boost::filesystem::exists(targetFile)) {
-        LogPrintf("Starting Proof-of-Space datafile generation at %s.\n", targetFile.string());
+        LogPrintf("Starting Proof-of-Space datafile generation at %s. This may take several minutes to finish.\n", targetFile.string());
 
         const char *hashInput = "Verthash Proof-of-Space Datafile";
         uint8_t *pk = (uint8_t *)malloc(NODE_SIZE);

@@ -153,14 +153,15 @@ public:
                 {  0, uint256S("0x3ee6c1dad58724b6fb81f5fee6593d50f4b25f57fd4e5d0bd2b5c6e707571c43")},
                 {  50000, uint256S("0x5c62a9a328e761231e6c5841b4cbb67a8212e801f88996e78ef6803c3271e5af")},
                 {  200000, uint256S("0xc2eec4856e6263ddab4a753444491b4cf2f649f6d8e59c9bed362e40e4462fce")},
+                {  300000, uint256S("0x1af35526bee95267ba9237757ec93333f3e914d77757671288ab6c4890e05980")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from block:  getchaintxstats 43200 81a6e9eb6a4837c418b61f61bf260c34d05ebe1f12d0fe000cec09383e248438 (block height 247364)
-            /* nTime    */ 1614080342,
-            /* nTxCount */ 266219,
-            /* dTxRate  */ 0.0122879390851726
+            // Data from block height 315950: getchaintxstats 43200 93f74cb5d725b14028830cdd1e95477e2ddd3351e0c9d8708b69ec31b15a6202 
+            /* nTime    */ 1619525841,
+            /* nTxCount */ 349319,
+            /* dTxRate  */ 0.01532626514158349
         };
 
         /* disable fallback fee on mainnet */
@@ -233,7 +234,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("213.239.231.78","213.239.231.78");
+        vSeeds.emplace_back("172.106.13.52","172.106.13.52");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,74);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,73);
@@ -253,14 +254,15 @@ public:
         checkpointData = {
             {
                 {0, uint256S("9819613c6bb107effca6704a2ade32d2050d745fa11a56a789f51adffd765f8f")},
+                {400, uint256S("c7cc8a196f6544d4d8738c7f62f580e86c6164f0dbfe48754259d672ba1cf923")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from rpc: getchaintxstats 4096 9819613c6bb107effca6704a2ade32d2050d745fa11a56a789f51adffd765f8f
-            /* nTime    */ 1593073394,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0
+            // Data from rpc: getchaintxstats 128 c7cc8a196f6544d4d8738c7f62f580e86c6164f0dbfe48754259d672ba1cf923
+            /* nTime    */ 1618088973,
+            /* nTxCount */ 861,
+            /* dTxRate  */ 0.00173125042266856
         };
 
         m_fallback_fee_enabled = true;
