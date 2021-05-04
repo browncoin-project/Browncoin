@@ -83,7 +83,7 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 12; // 75% of 8064
-        consensus.nMinerConfirmationWindow = 5040; // nPowTargetTimespan / nPowTargetSpacing
+        consensus.nMinerConfirmationWindow = 125; // nPowTargetTimespan / nPowTargetSpacing
         // Value for previous forks
         consensus.nPreMinerConfirmationWindow = 16; // nPowTargetTimespan / nPowTargetSpacing * 4
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
@@ -194,7 +194,7 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 3; // 75% for testchains
-        consensus.nMinerConfirmationWindow = 5040; // nPowTargetTimespan / nPowTargetSpacing
+        consensus.nMinerConfirmationWindow = 125; // nPowTargetTimespan / nPowTargetSpacing
         // Value for previous forks
         consensus.nPreMinerConfirmationWindow = 4; // nPowTargetTimespan / nPowTargetSpacing
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
