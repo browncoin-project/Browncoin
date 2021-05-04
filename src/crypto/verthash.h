@@ -15,7 +15,7 @@
 #include <fs.h>
 #include <crypto/tiny_sha3/sha3.h>
 
-#define VERTHASH_FORKBLOCK_TESTNET 451
+#define VERTHASH_FORKBLOCK_TESTNET 500
 #define VERTHASH_FORKBLOCK_MAINNET 1500000
 
 /** Default for -blockmaxweight, which controls the range of block weights the mining code will create **/
