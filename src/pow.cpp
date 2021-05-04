@@ -32,7 +32,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         if(nHeight < VERTHASH_FORKBLOCK_MAINNET) {
             return GetNextWorkRequired_Scrypt(pindexLast, pblock, params);
         } else if(nHeight >= VERTHASH_FORKBLOCK_MAINNET && nHeight < VERTHASH_FORKBLOCK_MAINNET+10) { // Force difficulty for 10 blocks - Verthash hardfork
-            return 0x1c07fff8;
+            return 0x1d00fff6;
         }
     } else {
         if(nHeight < VERTHASH_FORKBLOCK_TESTNET) {
@@ -55,21 +55,6 @@ unsigned int GetNextWorkRequired_Scrypt(const CBlockIndex* pindexLast, const CBl
 {
     assert(pindexLast != nullptr);
     unsigned int nProofOfWorkLimit = UintToArith256(params.preVerthashPowLimit).GetCompact();
-    const int nHeight = pindexLast->nHeight + 1;
-
-    if(Params().NetworkIDString() == CBaseChainParams::MAIN) {
-        if(nHeight < VERTHASH_FORKBLOCK_MAINNET) {
-            return GetNextWorkRequired_Scrypt(pindexLast, pblock, params);
-        } else if(nHeight >= VERTHASH_FORKBLOCK_MAINNET && nHeight < VERTHASH_FORKBLOCK_MAINNET+10) { // Force difficulty for 10 blocks - Verthash hardfork
-            return 0x1d00fff6;
-        }
-    } else {
-        if(nHeight < VERTHASH_FORKBLOCK_TESTNET) {
-            return GetNextWorkRequired_Scrypt(pindexLast, pblock, params);
-        } else if(nHeight >= VERTHASH_FORKBLOCK_TESTNET && nHeight < VERTHASH_FORKBLOCK_TESTNET+10) { // Set diff to mindiff on testnet Verthash fork
-            return nProofOfWorkLimit;
-        }
-    }
 
     // Only change once per difficulty adjustment interval
     if ((pindexLast->nHeight+1) % params.preDifficultyAdjustmentInterval() != 0)
@@ -159,7 +144,7 @@ unsigned int KimotoGravityWell(const CBlockIndex* pindexLast,
                 if ((PastRateAdjustmentRatio <= EventHorizonDeviationSlow) || (PastRateAdjustmentRatio >= EventHorizonDeviationFast)) { assert(BlockReading); break; }
         }
         if (BlockReading->pprev == NULL ||
-            (Params().NetworkIDString() == CBaseChainParams::MAIN && (BlockReading->nHeight == 1080000 || BlockReading->nHeight == VERTHASH_FORKBLOCK_MAINNET))) // Don't calculate past fork block on mainnet
+            (Params().NetworkIDString() == CBaseChainParams::MAIN && (BlockReading->nHeight == VERTHASH_FORKBLOCK_MAINNET))) // Don't calculate past fork block on mainnet
         {
                 assert(BlockReading);
                 break;
@@ -192,6 +177,9 @@ unsigned int KimotoGravityWell(const CBlockIndex* pindexLast,
     } else if (bnNew > bnProofOfWorkLimit) { // REGTEST
         bnNew = bnProofOfWorkLimit;
 	}
+
+    return bnNew.GetCompact();
+}
 
 unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
 {
