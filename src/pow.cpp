@@ -198,7 +198,9 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     arith_uint256 bnOld;
     bnNew.SetCompact(pindexLast->nBits);
     bnOld = bnNew;
-    bool fShift = bnNew.bits() > 235;
+    // Browncoin: intermediate uint256 can overflow by 1 bit
+    const arith_uint256 bnPowLimit = UintToArith256(params.preVerthashPowLimit);
+    bool fShift = bnNew.bits() > bnPowLimit.bits() - 1;
     if (fShift)
         bnNew >>= 1;
     bnNew *= nActualTimespan;
@@ -206,7 +208,6 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     if (fShift)
         bnNew <<= 1;
 
-    const arith_uint256 bnPowLimit = UintToArith256(params.preVerthashPowLimit);
     if (bnNew > bnPowLimit)
         bnNew = bnPowLimit;
 
