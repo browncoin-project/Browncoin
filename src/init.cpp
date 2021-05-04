@@ -1453,8 +1453,6 @@ bool AppInitMain(InitInterfaces& interfaces)
     }
 
 
-
-
     // ********************************************************* Step 6b: generate verthash file and verify if it's valid
 
     int cycle = 0;

@@ -76,12 +76,16 @@ public:
         // Value for previous forks
         consensus.preVerthashPowLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 
-        consensus.nPowTargetTimespan = 4 * 60;
+        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
+        // Value for previous forks
+        consensus.nPreKGWPowTargetTimespan = 4 * 60;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 12; // 75% of 8064
-        consensus.nMinerConfirmationWindow = 16; // nPowTargetTimespan / nPowTargetSpacing * 4
+        consensus.nMinerConfirmationWindow = 5040; // nPowTargetTimespan / nPowTargetSpacing
+        // Value for previous forks
+        consensus.nPreMinerConfirmationWindow = 16; // nPowTargetTimespan / nPowTargetSpacing * 4
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
@@ -184,12 +188,16 @@ public:
         // Value for previous forks
         consensus.preVerthashPowLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 
-        consensus.nPowTargetTimespan = 4 * 60; 
+        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
+        // Value for previous forks
+        consensus.nPreKGWPowTargetTimespan = 4 * 60;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 3; // 75% for testchains
-        consensus.nMinerConfirmationWindow = 4; // nPowTargetTimespan / nPowTargetSpacing
+        consensus.nMinerConfirmationWindow = 5040; // nPowTargetTimespan / nPowTargetSpacing
+        // Value for previous forks
+        consensus.nPreMinerConfirmationWindow = 4; // nPowTargetTimespan / nPowTargetSpacing
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999;
@@ -277,11 +285,13 @@ public:
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.preVerthashPowLimit = consensus.powLimit;
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
+        consensus.nPreKGWPowTargetTimespan = consensus.nPowTargetTimespan;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 3; // 75% for testchains
         consensus.nMinerConfirmationWindow = 0; // Faster than normal for regtest (144 instead of 2016)
+        consensus.nPreMinerConfirmationWindow = consensus.nMinerConfirmationWindow;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
