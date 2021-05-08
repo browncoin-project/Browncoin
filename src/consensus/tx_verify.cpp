@@ -205,7 +205,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
     return true;
 }
 
-bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, const CCoinsViewCache& inputs, int nSpendHeight, CAmount& txfee)
+bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, const CCoinsViewCache& inputs, int nSpendHeight, CAmount& txfee, bool isMainNet)
 {
     // are the actual inputs available?
     if (!inputs.HaveInputs(tx)) {
@@ -220,10 +220,26 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, c
         assert(!coin.IsSpent());
 
         // If prev is coinbase, check that it's matured
-        if (coin.IsCoinBase() && nSpendHeight - coin.nHeight < COINBASE_MATURITY) {
-            return state.Invalid(false,
-                REJECT_INVALID, "bad-txns-premature-spend-of-coinbase",
-                strprintf("tried to spend coinbase at depth %d", nSpendHeight - coin.nHeight));
+        if (coin.IsCoinBase()) {
+            // Browncoin: Switch maturity during verthash hardfork
+            int nCoinbaseMaturity = COINBASE_MATURITY;
+            if(isMainNet) {
+                if(coin.nHeight < COINBASE_MATURITY_SWITCH_HEIGHT_MAINNET)
+                {
+                    nCoinbaseMaturity = COINBASE_MATURITY_PREFORK;
+                }
+            }
+            else {
+                if(coin.nHeight < COINBASE_MATURITY_SWITCH_HEIGHT_TESTNET)
+                {
+                    nCoinbaseMaturity = COINBASE_MATURITY_PREFORK;
+                }
+            }
+            if (nSpendHeight - coin.nHeight < nCoinbaseMaturity) {
+                return state.Invalid(false,
+                    REJECT_INVALID, "bad-txns-premature-spend-of-coinbase",
+                    strprintf("tried to spend coinbase at depth %d", nSpendHeight - coin.nHeight));
+            }
         }
 
         // Check for negative or overflow input values
