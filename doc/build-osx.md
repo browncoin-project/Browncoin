@@ -53,7 +53,7 @@ Build Browncoin Core
     You can disable the GUI build by passing `--without-gui` to configure.
         chmod +x autogen.sh
         ./autogen.sh
-        ./configure
+        ./configure --disable-shared
         chmod +x share/genbuild.sh
         make
 
