@@ -57,7 +57,7 @@ unsigned int GetNextWorkRequired_Scrypt(const CBlockIndex* pindexLast, const CBl
     unsigned int nProofOfWorkLimit = UintToArith256(params.preVerthashPowLimit).GetCompact();
 
     // Only change once per difficulty adjustment interval
-    if ((pindexLast->nHeight+1) % params.preDifficultyAdjustmentInterval() != 0)
+    if ((pindexLast->nHeight+1) % params.DifficultyAdjustmentInterval() != 0)
     {
         if (params.fPowAllowMinDifficultyBlocks)
         {
@@ -70,7 +70,7 @@ unsigned int GetNextWorkRequired_Scrypt(const CBlockIndex* pindexLast, const CBl
             {
                 // Return the last non-special-min-difficulty-rules-block
                 const CBlockIndex* pindex = pindexLast;
-                while (pindex->pprev && pindex->nHeight % params.preDifficultyAdjustmentInterval() != 0 && pindex->nBits == nProofOfWorkLimit)
+                while (pindex->pprev && pindex->nHeight % params.DifficultyAdjustmentInterval() != 0 && pindex->nBits == nProofOfWorkLimit)
                     pindex = pindex->pprev;
                 return pindex->nBits;
             }
@@ -81,9 +81,9 @@ unsigned int GetNextWorkRequired_Scrypt(const CBlockIndex* pindexLast, const CBl
     // Go back by what we want to be 14 days worth of blocks
     // Browncoin: This fixes an issue where a 51% attack can change difficulty at will.
     // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
-    int blockstogoback = params.preDifficultyAdjustmentInterval()-1;
-    if ((pindexLast->nHeight+1) != params.preDifficultyAdjustmentInterval())
-        blockstogoback = params.preDifficultyAdjustmentInterval();
+    int blockstogoback = params.DifficultyAdjustmentInterval()-1;
+    if ((pindexLast->nHeight+1) != params.DifficultyAdjustmentInterval())
+        blockstogoback = params.DifficultyAdjustmentInterval();
 
     // Go back by what we want to be 14 days worth of blocks
     const CBlockIndex* pindexFirst = pindexLast;
@@ -188,10 +188,10 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 
     // Limit adjustment step
     int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-    if (nActualTimespan < params.nPreKGWPowTargetTimespan/4)
-        nActualTimespan = params.nPreKGWPowTargetTimespan/4;
-    if (nActualTimespan > params.nPreKGWPowTargetTimespan*4)
-        nActualTimespan = params.nPreKGWPowTargetTimespan*4;
+    if (nActualTimespan < params.nPowTargetTimespan/4)
+        nActualTimespan = params.nPowTargetTimespan/4;
+    if (nActualTimespan > params.nPowTargetTimespan*4)
+        nActualTimespan = params.nPowTargetTimespan*4;
 
     // Retarget
     arith_uint256 bnNew;
@@ -204,7 +204,7 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     if (fShift)
         bnNew >>= 1;
     bnNew *= nActualTimespan;
-    bnNew /= params.nPreKGWPowTargetTimespan;
+    bnNew /= params.nPowTargetTimespan;
     if (fShift)
         bnNew <<= 1;
 
