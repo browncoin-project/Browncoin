@@ -76,9 +76,7 @@ public:
         // Value for previous forks
         consensus.preVerthashPowLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 
-        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        // Value for previous forks
-        consensus.nPreKGWPowTargetTimespan = 4 * 60;
+        consensus.nPowTargetTimespan = 4 * 60;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -188,9 +186,7 @@ public:
         // Value for previous forks
         consensus.preVerthashPowLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 
-        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        // Value for previous forks
-        consensus.nPreKGWPowTargetTimespan = 4 * 60;
+        consensus.nPowTargetTimespan = 4 * 60;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
@@ -285,7 +281,6 @@ public:
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.preVerthashPowLimit = consensus.powLimit;
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
-        consensus.nPreKGWPowTargetTimespan = consensus.nPowTargetTimespan;
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
