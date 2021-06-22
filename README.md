@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Genesis](https://img.shields.io/badge/Genesis%20Block-June25,%202020-lightgrey)
+![Hard-Fork](https://img.shields.io/badge/Genesis%20Block-Block,400000-lightgrey)
+
 
 # Nice this is Browncoin's README!
 
@@ -8,7 +10,7 @@
 ## Welcome to Browncoin! 
 
 ## Attention:
-### Browncoin network upgrade soon on MainNet on Block 400000 . Check v1.2 release notes in [releases](https://github.com/browncoin-project/Browncoin/releases/).
+### Browncoin network upgrade soon on MainNet at Block 400000 . Check v1.2 release notes in [releases](https://github.com/browncoin-project/Browncoin/releases/).
 ### Please upgrade your wallets to the latest release 
 ### After block 400000, All users including 2b2t players will be able to mine Browncoin easily using their GPUs. Browncoin is becoming an ASIC-resistant coin to encourage fair mining.
 What is Browncoin?
