@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Genesis](https://img.shields.io/badge/Genesis%20Block-June25,%202020-lightgrey)
-![Hard-Fork](https://img.shields.io/badge/Genesis%20Block-Block,400000-lightgrey)
+![Hard-Fork](https://img.shields.io/badge/VertHash%20Hard%20Fork-Block%20400000-green)
 
 
 # Nice this is Browncoin's README!
