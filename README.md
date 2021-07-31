@@ -9,10 +9,9 @@
 
 ## Welcome to Browncoin! 
 
-## Attention:
-### Browncoin network upgrade soon on MainNet at Block 400000 . Check v1.2 release notes in [releases](https://github.com/browncoin-project/Browncoin/releases/).
-### Please upgrade your wallets to the latest release 
-### After block 400000, All users including 2b2t players will be able to mine Browncoin easily using their GPUs. Browncoin is becoming an ASIC-resistant coin to encourage fair mining.
+## Browncoin network upgrade completed on MainNet at Block 400000 . 
+#### Please upgrade your wallets to the latest release. Check v1.2 release notes in [releases](https://github.com/browncoin-project/Browncoin/releases/).
+#### Browncoin is now an ASIC-resistant coin to encourage fair mining.
 What is Browncoin?
 ----------
 This is a Verthash-based fork to be used as an electronic currency that doesn't rely on middlemen such as PayPal or other payment processors.
