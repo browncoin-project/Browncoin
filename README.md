@@ -29,13 +29,13 @@ Specifications
 Specification | Description
 ------------- | ----------
 Ticker Symbol                  | BRWN
-PoW Algorithm                  | *SCRYPT* -> **(Hard-forking to VertHash on block 400000)**
+PoW Algorithm                  | VertHash
 Maxiumum Supply                | 69000000
 SegWit                         | Activated
 Block Time                     | 60 Seconds / 1 Minute
-Coinbase  Maturity             | *10 Blocks* -> **After hardfork: 1000 Blocks / 1000 Minutes (~16 hours)**
+Coinbase  Maturity             | 1000 Blocks / 1000 Minutes (~16 hours)
 Wallet Confirmation            | 10 Blocks / 10 Minutes
-Difficulty Adjustment Interval | 4 Blocks / 4 Minutes -> **After hardfork: KGW algorithm replaces current difficulty adjustment algorithm**
+KGW Diff Adjustment algorithm  | Activated
 [Genesis Block](https://github.com/browncoin-project/Browncoin/blob/4fd417bcb8f71b184e2be24ff89b76c760295c5f/src/chainparams.cpp#L55) | Created on 25 June 2020
 
 Block Rewards
