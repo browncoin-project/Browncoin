@@ -58,4 +58,4 @@ Year | Block | Reward
 - **The Bitcoin Core developers** and **The Litecoin Core developers**.
 - **The Vertcoin Developers** for making Verthash PoW algorithm.
 - Twitter, Inc for making twemoji ([License](https://github.com/twitter/twemoji/blob/master/LICENSE-GRAPHICS)) (our logo uses their "Man: Dark Skin Tone" emoji)
-- 2b2t.org for bringing together the players of the Brownmen.
+- 2b2t.org for bringing together the players that created and maintain Browncoin.
